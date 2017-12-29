@@ -11,9 +11,8 @@ class Series
             "Slice length(#{length}) must be less than string length(#{number.length})."
     end
     number
-      .each_char
+      .chars
       .each_cons(length)
-      .entries
       .map(&:join)
   end
 end
